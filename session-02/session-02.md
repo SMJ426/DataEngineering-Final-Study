@@ -145,7 +145,7 @@ spark.sql("""
 | amount MIN/MAX | 150.0 / 150.0 | 100.0 / 200.0 |
 
 **File Pruning 동작 예시:**
-`WHERE amount > 180` 쿼리 시 -> 파일 1 (max=150.0) 스킵 ✓ -> 파일 2만 읽음
+`WHERE amount > 180` 쿼리 시 -> 파일 1 (max=150.0) 스킵 -> 파일 2만 읽음
 
 > lower_bounds / upper_bounds는 Iceberg 내부에서 바이너리로 직렬화되어 저장된다.
 > 쿼리 엔진이 이 값을 읽고 파일 스킵 여부를 결정하는 것이 File Pruning의 실체다.
